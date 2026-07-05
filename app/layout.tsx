@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Navbar from "@/components/layout/navbar/Navbar";
 import { Geist, Plus_Jakarta_Sans } from "next/font/google";
+import ScrollToTop from "@/components/ScrollToTop";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +37,12 @@ export default function RootLayout({
     >
     <body className="bg-background text-foreground antialiased">
         <ThemeProvider>
+       
             <Navbar />
+            <ScrollToTop />
+
+            <ScrollProgress />
+         
           {children}
         </ThemeProvider>
       </body>
